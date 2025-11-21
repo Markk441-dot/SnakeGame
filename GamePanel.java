@@ -22,7 +22,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
     // Game States: 0 = Menu, 1 = Running, 2 = Game Over
     int gameState = 0;
-    int menuOption = 0; // 0 = Start Game, 1 = Exit Game
+    int menuOption = 0; // 0 = Start Game,  = Exit Game
 
     Timer timer;
     Random rand;
@@ -101,24 +101,24 @@ public class GamePanel extends JPanel implements ActionListener {
 
         // Menu Options
         g.setFont(new Font("INk Free", Font.BOLD, 40));
-        FontMetrics metrics2 = getFontMetrics(g.getFont());
+        FontMetrics metrics3 = getFontMetrics(g.getFont());
 
         // Option 1: Start Game
         if (menuOption == 0) {
             g.setColor(Color.yellow); // Selected color
-            g.drawString("> Start Game <", (SCREEN_WIDTH - metrics2.stringWidth("> Start Game <")) / 2, SCREEN_HEIGHT / 2);
+            g.drawString("> Start Game <", (SCREEN_WIDTH - metrics3.stringWidth("> Start Game <")) / 2, SCREEN_HEIGHT / 2);
         } else {
             g.setColor(Color.red); // Unselected color
-            g.drawString("Start Game", (SCREEN_WIDTH - metrics2.stringWidth("Start Game")) / 2, SCREEN_HEIGHT / 2);
+            g.drawString("Start Game", (SCREEN_WIDTH - metrics3.stringWidth("Start Game")) / 2, SCREEN_HEIGHT / 2);
         }
 
         // Option 2: Exit Game
         if (menuOption == 1) {
             g.setColor(Color.yellow);
-            g.drawString("> Exit Game <", (SCREEN_WIDTH - metrics2.stringWidth("> Exit Game <")) / 2, SCREEN_HEIGHT / 2 + 60);
+            g.drawString("> Exit Game <", (SCREEN_WIDTH - metrics3.stringWidth("> Exit Game <")) / 2, SCREEN_HEIGHT / 2 + 60);
         } else {
             g.setColor(Color.red);
-            g.drawString("Exit Game", (SCREEN_WIDTH - metrics2.stringWidth("Exit Game")) / 2, SCREEN_HEIGHT / 2 + 60);
+            g.drawString("Exit Game", (SCREEN_WIDTH - metrics3.stringWidth("Exit Game")) / 2, SCREEN_HEIGHT / 2 + 60);
         }
 
         g.setColor(Color.BLACK);
